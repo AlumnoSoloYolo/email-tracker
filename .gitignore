@@ -30,3 +30,7 @@ __pycache__/
 # Archivos de sistema
 .DS_Store
 Thumbs.db
+
+ logs/email_links_logs.txt
+ logs/email_logs.txt
+ logs/emails_sent.txt
