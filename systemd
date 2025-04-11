@@ -1,0 +1,15 @@
+[Unit]
+Description=Email Tracker Gunicorn Service
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/email-tracker
+Environment="PATH=/home/ubuntu/email-tracker/venv/bin"
+EnvironmentFile=/home/ubuntu/email-tracker/.env.production
+ExecStart=/home/ubuntu/email-tracker/venv/bin/gunicorn --workers 3 --bind 0.0.0.0:5000 wsgi:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

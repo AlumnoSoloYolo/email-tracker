@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Registros de Rastreo</h1>
+    
+    <h2>Correos Enviados</h2>
+    <pre>{{ sent_logs }}</pre>
+    
+    <h2>Correos Abiertos</h2>
+    <pre>{{ email_logs }}</pre>
+
+    <h2>Enlaces Clickeados</h2>
+    <pre>{{ links_logs }}</pre>
+{% endblock %}
